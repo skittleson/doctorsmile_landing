@@ -1,0 +1,52 @@
+# robots.txt — Dr. Smile Dental Group
+# https://www.doctorsmile.com/
+
+User-agent: *
+Allow: /
+Disallow: /.well-known/
+Disallow: /*?s=
+
+Sitemap: https://www.doctorsmile.com/sitemap.xml
+
+# --- AI crawler rules (per isitagentready) ---
+# Public informational dental site: allow AI crawlers to index and read content.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Content Signals (https://contentsignals.org / draft-romm-aipref-contentsignals) ---
+# Declare how AI may use this site's content. Adjust to your policy.
+# ai-train/no  = do not allow my content to train your models
+# search/yes   = allow use for search/RAG-style retrieval
+# ai-input/no  = do not use content as-is as model input
+Content-Signal: ai-train=no, search=yes, ai-input=no

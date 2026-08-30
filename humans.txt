@@ -1,0 +1,14 @@
+# humans.txt — Dr. Smile Dental Group (https://www.doctorsmile.com/)
+
+## Team
+- Dr. Hossein Javid, DDS — drsmiledental.com
+- Dr. Mariam Nadi, DDS
+- Dr. Kayvon Javid, DDS
+
+## Site / technology
+- Static landing page (Bootstrap 4-inspired, inlined CSS)
+- Marketing / consulting: Progressive Dental
+  https://www.progressivedentalmarketing.com/consulting/
+
+## Thanks
+- Patients across El Segundo, Lomita, San Pedro, Torrance & Whittier, CA

@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/tmp/
+
+# Local test server
+http_server.pid
+
+# gstack / tooling
+.gstack/

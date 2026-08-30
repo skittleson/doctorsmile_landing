@@ -1,0 +1,42 @@
+{
+  "$schema": "https://agent-card.org/schemas/ai-catalog.json",
+  "specVersion": "1.0",
+  "name": "Dr. Smile Dental Group",
+  "description": "Landing page for Dr. Smile Dental Group, a multi-specialty dental practice serving South Bay & Los Angeles, California. Lists practice links and five office locations with phone numbers.",
+  "url": "https://www.doctorsmile.com/",
+  "resources": [
+    {
+      "id": "home",
+      "name": "Home — Dr. Smile Dental Group",
+      "type": "document",
+      "description": "Landing page with practice chooser panels and office locations.",
+      "url": "https://www.doctorsmile.com/",
+      "contentType": "text/html",
+      "markdownUrl": "https://www.doctorsmile.com/index.md"
+    },
+    {
+      "id": "llms-txt",
+      "name": "Site summary for LLMs (llms.txt)",
+      "type": "document",
+      "description": "Plain-text summary of the site, key facts, and locations for LLM agents.",
+      "url": "https://www.doctorsmile.com/llms.txt",
+      "contentType": "text/plain"
+    },
+    {
+      "id": "dr-smile-dental-group-drsmiledental",
+      "name": "Hossein Javid, DDS practice site",
+      "type": "webpage",
+      "description": "General dentistry practice of Hossein Javid, DDS.",
+      "url": "http://www.drsmiledental.com/",
+      "contentType": "text/html"
+    },
+    {
+      "id": "dr-smile-online-doctorsmileonline",
+      "name": "Dr. Smile practice site (Nadi & Javid)",
+      "type": "webpage",
+      "description": "Main practice site of Mariam Nadi, DDS and Kayvon Javid, DDS.",
+      "url": "https://doctorsmileonline.com/",
+      "contentType": "text/html"
+    }
+  ]
+}
