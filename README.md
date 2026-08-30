@@ -29,13 +29,19 @@ and lists the practice's five office locations with new/current-patient phone nu
 
 See `research.md` for full research and the agent-readiness details.
 
+## Structure
+
+The deployed site lives in [`docs/`](docs/) (GitHub Pages source folder).
+Supporting notes (`research.md`, `README.md`) stay at the repo root.
+
 ## Local preview
 
 ```sh
-python3 -m http.server 8123
+cd docs && python3 -m http.server 8123
 # open http://localhost:8123/
 ```
 
 ## Deploy
 
-Hosted on GitHub Pages from the `main` branch → https://skittleson.github.io/doctorsmile_landing/
+Hosted on GitHub Pages from the **`main` branch, `/docs` folder** →
+https://skittleson.github.io/doctorsmile_landing/
