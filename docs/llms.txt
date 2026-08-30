@@ -32,11 +32,11 @@ websites and lists the practice's office locations and phone numbers.
 ## Content
 
 The page contains: practice logo, tagline, two doctor/practice chooser panels,
-a "Our Locations" section (5 offices with new/current patient phone numbers),
-and a footer link to the site's marketing partner (Progressive Dental).
+and an "Our Locations" section (5 offices with new/current patient phone numbers).
 
-## Optional
+## Related
 
-- Full practice site: https://doctorsmileonline.com/
-- About / doctors: https://doctorsmileonline.com/about/
-- Services: https://doctorsmileonline.com/services/
+- [Hossein Javid, DDS — Full practice site](https://doctorsmileonline.com/)
+- [About / doctors](https://doctorsmileonline.com/about/)
+- [Services](https://doctorsmileonline.com/services/)
+- [Hossein Javid, DDS (drsmiledental.com)](http://www.drsmiledental.com/)
