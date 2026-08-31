@@ -410,5 +410,17 @@
         </div>
     </section>
 </main>
+<script>
+    function trackLocationClick(city, linkType, url) {
+        if (typeof gtag === 'function') {
+            gtag('event', 'location_click', {
+                location_city: city,
+                link_type: linkType,
+                link_url: url,
+                transport_type: 'beacon'
+            });
+        }
+    }
+</script>
 </body>
 </html>
