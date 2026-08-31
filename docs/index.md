@@ -9,31 +9,38 @@
 
 ## Our Locations
 
+**Hours (all locations):** Mon–Fri 8:00am–6:00pm, Sat/Sun by appointment only.
+
 ### El Segundo, CA
+General & family dentistry, oral surgery
 11976 Aviation Blvd., El Segundo, CA 90304
 - New Patients: [310-341-4788](tel:+1-310-341-4788)
 - Current Patients: [310-643-6221](tel:+1-310-643-6221)
+- [More Info](https://toothopiadental.com/contact-us/)
 
 ### Lomita, CA
+Gum care, veneers & full-mouth restoration
 2104 Pacific Coast Hwy., Lomita, CA 90717
 - New Patients: [310-878-9532](tel:+1-310-878-9532)
 - Current Patients: [310-539-1111](tel:+1-310-539-1111)
+- [More Info](https://doctorsmileonline.com/dentist-lomita/)
 
 ### San Pedro, CA
-1622 S Gaffey St., San Pedro, CA 90731
+Family care, implants & emergency dentistry
+1622 S Gaffey St, San Pedro, CA 90731
 - New Patients: [310-961-4222](tel:+1-310-961-4222)
 - Current Patients: [310-548-8128](tel:+1-310-548-8128)
+- [More Info](https://doctorsmileonline.com/dentist-san-pedro/)
 
 ### Torrance, CA
+Family dentistry, Invisalign & same-day care
 24667 Crenshaw Blvd. #D, Torrance, CA 90505
 - New Patients: [310-341-4783](tel:+1-310-341-4783)
 - Current Patients: [310-325-8555](tel:+1-310-325-8555)
+- [More Info](https://doctorsmileonline.com/dentist-torrance/)
 
-### Whittier, CA
-16135 Whittier Blvd. #105, Whittier, CA 90603
-- New Patients: [424-286-2947](tel:+1-424-286-2947)
-- Current Patients: [562-943-1098](tel:+1-562-943-1098)
-
----
-
-Dental Consulting By [Progressive Dental](https://www.progressivedentalmarketing.com/consulting/)
+### Corona Del Mar (Newport), CA
+Cosmetic dentistry, veneers & All-on-Four implants
+2121 East Coast Hwy STE 140, Corona Del Mar, CA 92625
+- Call Now: [(949) 640-0222](tel:+1-949-640-0222)
+- [More Info](https://doctorsmileonline.com/dentist-newport/)
