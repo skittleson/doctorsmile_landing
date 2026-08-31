@@ -210,6 +210,118 @@
 
         .xs-flex-fix { max-width: 50%; }
 
+        .loc-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .loc-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 992px) {
+            .loc-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .loc-card {
+            background: #fff;
+            border: 1px solid #e2e2e2;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            padding: 20px 20px 18px;
+            box-sizing: border-box;
+        }
+
+        .loc-card h3 {
+            font-family: 'Gotham Book', sans-serif;
+            color: #a71b29;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 17px;
+            font-weight: normal;
+            margin: 0 0 8px;
+            text-align: left;
+        }
+
+        .loc-card .loc-blurb {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.4;
+            margin: 0 0 10px;
+        }
+
+        .loc-card .loc-addr {
+            color: #333;
+            font-size: 13px;
+            line-height: 1.4;
+            margin: 0 0 10px;
+        }
+
+        .loc-card .loc-addr a { color: #333; text-decoration: none; }
+        .loc-card .loc-addr a:hover { text-decoration: underline; }
+
+        .loc-card .loc-phone {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            color: #a71b29;
+            text-decoration: none;
+            padding: 6px 0;
+        }
+
+        .loc-card .loc-phone-secondary {
+            display: block;
+            font-size: 12px;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .loc-card .loc-phone-secondary a { color: #888; text-decoration: none; }
+        .loc-card .loc-phone-secondary a:hover { text-decoration: underline; }
+
+        .loc-card .loc-hours {
+            font-size: 12px;
+            color: #777;
+            margin: 10px 0 14px;
+        }
+
+        .loc-card .loc-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .loc-card .loc-btn {
+            flex: 1 1 auto;
+            min-width: 90px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8px 10px;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid #a71b29;
+            color: #a71b29;
+            border-radius: 4px;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        .loc-card .loc-btn.solid {
+            background: #a71b29;
+            color: #fff;
+        }
+
+        @media (max-width: 400px) {
+            .loc-card .loc-actions { flex-direction: column; }
+            .loc-card .loc-btn { width: 100%; }
+        }
+
         @media screen and (min-width: 320px) and (max-width: 768px) {
             div.overlay-text { height: 85px; padding: 15px 0; }
             .overlay-text h2 { font-size: 14px; line-height: 1.3; margin: 0; }

@@ -11,3 +11,6 @@ http_server.pid
 
 # gstack / tooling
 .gstack/
+
+# superpowers brainstorm mockup sessions (ephemeral)
+.superpowers/
