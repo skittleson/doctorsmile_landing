@@ -31,6 +31,13 @@ websites and lists the practice's office locations and phone numbers.
 
 **Hours (all locations):** Mon–Fri 8:00am–6:00pm, Sat/Sun by appointment only.
 
+## Booking
+
+New and current patients are welcome at all five offices. To book an appointment,
+call your nearest office directly using the phone numbers in the table above.
+Spanish-speaking patients are served at all offices; call your local office to book
+or ask questions in Spanish.
+
 ## Content
 
 The page contains: practice logo, tagline, two doctor/practice chooser panels,

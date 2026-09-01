@@ -44,3 +44,14 @@ Cosmetic dentistry, veneers & All-on-Four implants
 2121 East Coast Hwy STE 140, Corona Del Mar, CA 92625
 - Call Now: [(949) 640-0222](tel:+1-949-640-0222)
 - [More Info](https://doctorsmileonline.com/dentist-newport/)
+
+## New Patients Welcome
+
+Dr. Smile Dental Group welcomes new and current patients at all five offices. To
+book an appointment, call your nearest office directly — numbers are listed above.
+
+## Spanish Speakers / Español
+
+¿Prefiere español? Atendemos pacientes de habla hispana en nuestras cinco
+oficinas. Para programar una cita o hacer una consulta, llame directamente a la
+oficina más cercana — los números están listados arriba.

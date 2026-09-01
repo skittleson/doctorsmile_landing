@@ -12,8 +12,8 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Smile Dental Group</title>
-    <meta name="description" content="Dr. Smile Dental Group — family dentistry serving El Segundo, Lomita, San Pedro, Torrance, Newport Beach and Corona Del Mar, CA. New and current patients welcome. Call today to schedule your visit.">
+    <title>Dr. Smile Dental Group | Dentists in the South Bay &amp; Newport</title>
+    <meta name="description" content="Family-owned multi-specialty dental group with five Southern California offices. New and current patients welcome — call your local office today.">
     <meta name="theme-color" content="#f0f0f0">
 
     <!-- Canonical & SEO -->
@@ -27,13 +27,12 @@
     <link rel="ai-catalog" type="application/json" href="./.well-known/ai-catalog.json">
 
     <!-- Search engine verification
-         NOTE: replace the content="" values with YOUR own tokens.
-         The google value below is reused from the live doctorsmileonline.com
-         site (same brand). Bing / Yandex / Alexa need tokens from those portals. -->
+         The Google token is claimed via the practice team (same brand as
+         doctorsmileonline.com). Bing / Yandex / Alexa verification tokens must
+         be obtained from their respective webmaster portals by the practice
+         team before adding them here; placeholder tokens are intentionally
+         omitted rather than shipping unfinished ADD_YOUR_* values. -->
     <meta name="google-site-verification" content="LK85a2MRAtBHyxB9_99YaOa2FDc1Wl4VCb2WaFospiQ">
-    <meta name="msvalidate.01" content="ADD_YOUR_BING_WEBMASTER_TOKEN">
-    <meta name="yandex-verification" content="ADD_YOUR_YANDEX_TOKEN">
-    <meta name="alexaVerifyID" content="ADD_YOUR_ALEXA_TOKEN">
 
     <!-- Open Graph (Facebook / social) -->
     <meta property="og:type" content="website">
@@ -68,27 +67,12 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": ["Dentist", "MedicalBusiness", "LocalBusiness"],
-          "@id": "https://www.doctorsmile.com/#practice",
+          "@type": "Organization",
+          "@id": "https://www.doctorsmile.com/#organization",
           "name": "Dr. Smile Dental Group",
           "url": "https://www.doctorsmile.com/",
+          "logo": "https://www.doctorsmile.com/img/logo.png",
           "image": "https://www.doctorsmile.com/img/logo.png",
-          "telephone": "+1-310-341-4788",
-          "priceRange": "$$",
-          "parentOrganization": {
-            "@type": "Organization",
-            "name": "Dr. Smile Dental Group"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "11976 Aviation Blvd.",
-            "addressLocality": "El Segundo",
-            "addressRegion": "CA",
-            "postalCode": "90304",
-            "addressCountry": "US"
-          },
-          "geo": { "@type": "GeoCoordinates", "latitude": "33.9163", "longitude": "-118.3776" },
-          "areaServed": ["El Segundo", "Lomita", "San Pedro", "Torrance", "Newport Beach", "Corona Del Mar"],
           "sameAs": [
             "https://www.facebook.com/drsmiledentalgroup",
             "https://www.instagram.com/dr.smile_dental_group/",
@@ -97,11 +81,128 @@
           ]
         },
         {
+          "@type": ["Dentist", "MedicalBusiness", "LocalBusiness"],
+          "@id": "https://www.doctorsmile.com/#location-elsegundo",
+          "branchOf": { "@id": "https://www.doctorsmile.com/#organization" },
+          "parentOrganization": { "@id": "https://www.doctorsmile.com/#organization" },
+          "name": "Dr. Smile Dental Group — El Segundo",
+          "url": "https://www.doctorsmile.com/",
+          "telephone": "+1-310-341-4788",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "11976 Aviation Blvd.",
+            "addressLocality": "El Segundo",
+            "addressRegion": "CA",
+            "postalCode": "90304",
+            "addressCountry": "US"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": "33.91630", "longitude": "-118.37760" },
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
+          ]
+        },
+        {
+          "@type": ["Dentist", "MedicalBusiness", "LocalBusiness"],
+          "@id": "https://www.doctorsmile.com/#location-lomita",
+          "branchOf": { "@id": "https://www.doctorsmile.com/#organization" },
+          "parentOrganization": { "@id": "https://www.doctorsmile.com/#organization" },
+          "name": "Dr. Smile Dental Group — Lomita",
+          "url": "https://doctorsmileonline.com/dentist-lomita/",
+          "telephone": "+1-310-878-9532",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2104 Pacific Coast Hwy.",
+            "addressLocality": "Lomita",
+            "addressRegion": "CA",
+            "postalCode": "90717",
+            "addressCountry": "US"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": "33.78945", "longitude": "-118.31754" },
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
+          ]
+        },
+        {
+          "@type": ["Dentist", "MedicalBusiness", "LocalBusiness"],
+          "@id": "https://www.doctorsmile.com/#location-san-pedro",
+          "branchOf": { "@id": "https://www.doctorsmile.com/#organization" },
+          "parentOrganization": { "@id": "https://www.doctorsmile.com/#organization" },
+          "name": "Dr. Smile Dental Group — San Pedro",
+          "url": "https://doctorsmileonline.com/dentist-san-pedro/",
+          "telephone": "+1-310-961-4222",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1622 S Gaffey St",
+            "addressLocality": "San Pedro",
+            "addressRegion": "CA",
+            "postalCode": "90731",
+            "addressCountry": "US"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": "33.72916", "longitude": "-118.29199" },
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
+          ]
+        },
+        {
+          "@type": ["Dentist", "MedicalBusiness", "LocalBusiness"],
+          "@id": "https://www.doctorsmile.com/#location-torrance",
+          "branchOf": { "@id": "https://www.doctorsmile.com/#organization" },
+          "parentOrganization": { "@id": "https://www.doctorsmile.com/#organization" },
+          "name": "Dr. Smile Dental Group — Torrance",
+          "url": "https://doctorsmileonline.com/dentist-torrance/",
+          "telephone": "+1-310-341-4783",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "24667 Crenshaw Blvd. #D",
+            "addressLocality": "Torrance",
+            "addressRegion": "CA",
+            "postalCode": "90505",
+            "addressCountry": "US"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": "33.80266", "longitude": "-118.32987" },
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
+          ]
+        },
+        {
+          "@type": ["Dentist", "MedicalBusiness", "LocalBusiness"],
+          "@id": "https://www.doctorsmile.com/#location-corona-del-mar",
+          "branchOf": { "@id": "https://www.doctorsmile.com/#organization" },
+          "parentOrganization": { "@id": "https://www.doctorsmile.com/#organization" },
+          "name": "Dr. Smile Dental Group — Corona Del Mar (Newport Beach)",
+          "url": "https://doctorsmileonline.com/dentist-newport/",
+          "telephone": "+1-949-640-0222",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2121 East Coast Hwy STE 140",
+            "addressLocality": "Corona Del Mar",
+            "addressRegion": "CA",
+            "postalCode": "92625",
+            "addressCountry": "US"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": "33.59959", "longitude": "-117.87374" },
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
+          ]
+        },
+        {
           "@type": "WebSite",
           "@id": "https://www.doctorsmile.com/#website",
           "url": "https://www.doctorsmile.com/",
           "name": "Dr. Smile",
-          "publisher": { "@id": "https://www.doctorsmile.com/#practice" }
+          "publisher": { "@id": "https://www.doctorsmile.com/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.doctorsmile.com/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.doctorsmile.com/" }
+          ]
         }
       ]
     }
@@ -174,12 +275,36 @@
             text-align: center;
             color: #a71b29;
             font-family: 'Gotham Book', sans-serif;
-            font-size: 34px;
-            letter-spacing: 3px;
+            font-size: 26px;
+            line-height: 1.35;
+            letter-spacing: 1px;
+            display: block;
+            text-transform: none;
+            margin: 0 auto 18px;
+            font-weight: normal;
+            max-width: 980px;
+        }
+
+        .tagline-sub {
+            text-align: center;
+            color: #a71b29;
+            font-family: 'Gotham Book', sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
             display: block;
             text-transform: uppercase;
-            margin: 0 auto;
+            margin: 0 auto 16px;
             font-weight: normal;
+        }
+
+        .tagline-intro {
+            text-align: center;
+            color: #333;
+            font-family: 'Gotham Book', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 820px;
         }
 
         .overlay-text h2 { font-size: 20px; line-height: 1.5; margin: 0; }
@@ -325,6 +450,37 @@
             div.overlay-text { height: 85px; padding: 15px 0; }
             .overlay-text h2 { font-size: 14px; line-height: 1.3; margin: 0; }
         }
+
+        section.closing { background-color: #f7f7f7; }
+        .closing .row { gap: 24px; }
+        .closing-block {
+            flex: 1 1 100%;
+            padding: 24px;
+            background: #fff;
+            border: 1px solid #e2e2e2;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+        @media (min-width: 768px) {
+            .closing-block { flex: 1 1 40%; }
+        }
+        .closing-h2 {
+            font-family: 'Gotham Book', sans-serif;
+            color: #a71b29;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 18px;
+            font-weight: normal;
+            margin: 0 0 10px;
+            text-align: left;
+        }
+        .closing-p {
+            color: #333;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .closing-p a { color: #a71b29; text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -335,7 +491,9 @@
     <section class="tagLine pv90">
         <div class="container">
             <div class="row">
-                <h1 class="introTag">A Smile is Happiness You'll<br />Find Right Under Your Nose</h1>
+                <h1 class="introTag">Dr. Smile Dental Group — Dentists in El Segundo, Lomita, San Pedro, Torrance &amp; Newport Beach</h1>
+                <p class="tagline-sub">A Smile is Happiness You'll Find Right Under Your Nose</p>
+                <p class="tagline-intro">Dr. Smile Dental Group is a family-owned, multi-specialty dental practice with five offices across Los Angeles' South Bay and Newport Beach, California — welcoming new and current patients.</p>
             </div>
         </div>
     </section>
@@ -489,6 +647,21 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section class="closing pv90">
+        <div class="container">
+            <div class="row">
+                <div class="closing-block">
+                    <h2 class="closing-h2">New Patients Welcome</h2>
+                    <p class="closing-p">Dr. Smile Dental Group welcomes new and current patients at all five offices across El Segundo, Lomita, San Pedro, Torrance, and Corona Del Mar (Newport Beach). To book an appointment, simply call your nearest office directly — the phone numbers for each location are listed above.</p>
+                </div>
+                <div class="closing-block">
+                    <h2 class="closing-h2">Spanish Speakers / Español</h2>
+                    <p class="closing-p">¿Prefiere español? Atendemos pacientes de habla hispana en nuestras cinco oficinas. Para programar una cita o hacer una consulta, llame directamente a la oficina más cercana — los números están listados arriba.</p>
+                </div>
             </div>
         </div>
     </section>
