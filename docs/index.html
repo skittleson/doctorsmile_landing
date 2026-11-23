@@ -156,6 +156,11 @@
           "name": "Dr. Smile Dental Group — Torrance",
           "url": "https://doctorsmileonline.com/dentist-torrance/",
           "telephone": "+1-310-341-4783",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "202"
+          },
           "priceRange": "$$",
           "address": {
             "@type": "PostalAddress",
@@ -414,6 +419,17 @@
         .loc-card .loc-phone-secondary a { color: #666; text-decoration: none; }
         .loc-card .loc-phone-secondary a:hover { text-decoration: underline; }
 
+        .loc-card .loc-rating {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 14px;
+            font-size: 12.5px;
+            color: #444;
+            margin: 4px 0 10px;
+        }
+        .loc-card .loc-rating .star { color: #e8a33d; letter-spacing: 1px; }
+        .loc-card .loc-rating .src { color: #666; font-size: 11.5px; }
+
         .loc-card .loc-hours {
             font-size: 12px;
             color: #666;
@@ -602,6 +618,10 @@
                        onclick="trackLocationClick('Lomita','call','tel:+1-310-878-9532')">310-878-9532</a>
                     <span class="loc-phone-secondary">Current patients: <a href="tel:+1-310-539-1111"
                        onclick="trackLocationClick('Lomita','call','tel:+1-310-539-1111')">310-539-1111</a></span>
+                    <div class="loc-rating">
+                        <span><span class="star">★★★★☆</span> <strong>4.1</strong> <span class="src">· 29 Unilocal</span></span>
+                        <span><span class="star">★★★★★</span> <strong>5.0</strong> <span class="src">· 43 Doctor.com</span></span>
+                    </div>
                     <p class="loc-hours">Mon&ndash;Fri: 8AM&ndash;6PM &middot; Sat/Sun: by appt.</p>
                     <div class="loc-actions">
                         <a class="loc-btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=2104+Pacific+Coast+Hwy%2C+Lomita%2C+CA+90717"
@@ -652,6 +672,10 @@
                        onclick="trackLocationClick('Torrance','call','tel:+1-310-341-4783')">310-341-4783</a>
                     <span class="loc-phone-secondary">Current patients: <a href="tel:+1-310-325-8555"
                        onclick="trackLocationClick('Torrance','call','tel:+1-310-325-8555')">310-325-8555</a></span>
+                    <div class="loc-rating">
+                        <span><span class="star">★★★★★</span> <strong>4.8</strong> <span class="src">· 202 Google reviews</span></span>
+                        <span><span class="star">★★★★☆</span> <strong>4.5</strong> <span class="src">· 107 Yelp reviews</span></span>
+                    </div>
                     <p class="loc-hours">Mon&ndash;Wed: 8AM&ndash;6PM &middot; Thu: 9AM&ndash;6PM &middot; Fri: 8:30AM&ndash;5PM &middot; Sat/Sun: closed</p>
                     <div class="loc-actions">
                         <a class="loc-btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=24667+Crenshaw+Blvd+%23D%2C+Torrance%2C+CA+90505"
