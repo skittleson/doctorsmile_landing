@@ -15,6 +15,7 @@ The hub page is technically in good shape (schema, GEO files, routing). The mark
 2. **4 of 5 offices have no detectable GBP/Yelp footprint** — the single largest untapped lever (GBP + reviews ≈56% of local-pack weight).
 3. **Zero attribution layer**: outbound links carry no UTM, so ad/spend decisions on this hub fly blind.
 4. The El Segundo card links to **toothopiadental.com** — a sister practice the owners also hold a stake in (Toothopia Dental is the rebranded former "Dr. Smile" El Segundo office, founded by Dr. Hossein Javid). The routing is intentional; the link is just **unlabeled**, so visitors can't tell it's still the same group.
+5. **Search Console data (Sections D–E, pulled 2026-11-23):** non-brand organic traffic has been flat for 13 weeks (4–9 clicks/week); the index is polluted with `?utm_source=google_business_profile` duplicates and cannibalizing "best-*" pages; one money query even ranks `/contact?rwg_token=…` URLs at positions 1–2 with zero clicks. Fixing canonicalization and titles is free clicks.
 
 ---
 
@@ -54,6 +55,26 @@ Sequence: B-7 first (1 week) → B-1 claims → B-2/B-3 per claim → B-4/5/6 in
 4. **Question-H2 FAQ content belongs on `doctorsmileonline.com`**, not here (duplication risk stands). This hub's citable artifacts (llms.txt table, definitional intro) are already its best exports. Effort: off-hub · Impact High (for the practice site).
 5. **Keep llms.txt / index.md / schema in sync manually** — no automated check exists; a stale office row is a citable misinformation source. Re-verify after the hours fixes land. Effort S · Impact Med.
 6. **Test actual prompts** ("dentist in Lomita CA that takes new patients", "emergency dentist Torrance weekend") across ChatGPT/Perplexity/AI Overviews quarterly; record whether the practice is named. This repo's reports are file-based and can't see retrieval. Effort S · Impact Med.
+
+## Section D — Data-Backed Findings (Search Console): Technical & Indexing
+
+Pulled 2026-11-23 via GSC API (28 days, `doctorsmileonline.com`; raw data in `gsc-raw-doctorsmileonline.txt`). 132 clicks / 5,942 impressions ≈ 2.2% CTR. **Note: `doctorsmile.com` (this hub) is NOT a verified GSC property — add it (verification token already in the page).**
+
+1. **UTM-in-URL duplication.** All four office pages are indexed WITH `?utm_source=google_business_profile` appended (`/dentist-san-pedro?utm_…` 38c/1786i; Lomita 20c/1080i; Torrance 15c/903i; Newport 13c/453i) while clean versions rank separately (Lomita clean: 2c/500i; `/contact` 3c/331i vs `/contact/` 1c/736i — trailing-slash duplication too). Why: splits ranking signals across duplicate URLs and distorts reporting. Fix: GBP website links → clean URLs; canonical tags on all pages; 301 or noindex the utm variants. Effort M · Impact **High**.
+2. **Keyword cannibalization.** "best dentist san pedro ca" spreads across 6+ URLs, all 0 clicks: home p68–78, `/best-affordable-dentist-in-san-pedro/` p26–58, `/best-dental-clinic-in-san-pedro-oral-health/` p13–45, `/dentist-san-pedro/` p21. Google rotates URLs instead of consolidating one. Fix: pick one canonical San Pedro target, merge/redirect the thin "best-*" variants, internal-link to the winner. Effort M · Impact **High**.
+3. **Review-widget parameter URLs indexed at money-query positions.** `/contact?rwg_token=…&source=cat` appears at positions 1–2 for "best dentist in san pedro ca" with 0 clicks. Fix: `noindex` parameterized contact URLs; block `rwg_token` in robots or strip the param at the edge. Effort S · Impact Med–High.
+4. **Brand-dominated, flat traffic.** "dr smile*" variants hold most clicks; non-brand trend (query ∌ "smile") flat for 13 weeks at 4–9 clicks/week on 1,550–3,320 weekly impressions — wide-but-shallow visibility with zero growth. Effort M (Sections E + B together) · Impact **High**.
+5. **Zero-click long-tail thin pages.** 0c/60+i each: `/best-walk-in-dentist-in-torrance/` 558i, `/best-dental-clinic-in-newport-beach/` 319i, `/best-deep-cleaning-dentist-in-newport-beach/` 158i, `/all-on-4-dental-implants-newport-beach/` 60i — consolidate into office/service pages. Effort S–M · Impact Med.
+6. **Mobile beats desktop 2.7x on CTR** (1.6% vs 0.6%; 5,131i vs 7,927i). Desktop sees the site on wide local-modifier queries and doesn't click — same title/snippet problem as E-3. Effort S · Impact Med.
+
+## Section E — Data-Backed Findings (Search Console): Content Opportunities
+
+1. **Push position 4–15 queries to top-3.** "dentist near me" 109i at p4.5 (1.8% CTR), "dr smile lomita" 141i p9.8, "dentist san pedro" 151i p19.4, "lomita dentist" 12i p10.9, "san pedro dental clinic" 17i p9.7. Expected CTR at p1 ≈ 27% vs ≈6% at p5 — "dentist near me" alone roughly triples clicks at parity. Effort M · Impact **High**.
+2. **Newport Beach near-zero organic presence.** "dentist in newport beach" 44i p47.6; Corona Del Mar pages all 0 clicks (`/best-dental-clinic-in-newport-beach/` 319i p35). Confirms B-1: no claimed GBP = no local pack = page 5. Claim the GBP before any Newport content work. Effort M · Impact **High**.
+3. **Zero-click impression sinks → title/meta rewrites.** `/best-affordable-dentist-in-san-pedro/` 836i/0c; `/best-walk-in-dentist-in-torrance/` 558i/0c; home 1876i at 0.6%. Lead titles with location + service + differentiator (Medicare, in-network, walk-in) before writing new content. Effort S · Impact Med–High.
+4. **Physician entity brand exists.** "mariam nadi" 21.4% CTR p1.2, "dr mariam nadi" 50i p15.2. Add `Physician`/`Person` schema + doctor bio pages so name queries land on owned pages and feed AI entity grounding. Effort S · Impact Med.
+5. **Service queries with volume, weak ranks.** "dental implants san pedro" 83i p20.2, "dentures san pedro ca" 18i p27.4, `/how-dental-implants-in-san-pedro/` 122i p36. Strengthen or consolidate into office pages. Effort M · Impact Med–High.
+6. **Desktop CTR anomaly.** 7,927i at 0.6% vs mobile 1.6% — audit desktop-visible titles/snippets (same fix as #3). Effort S · Impact Med.
 
 ## Top 5 if only five things get done
 
