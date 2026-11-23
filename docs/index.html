@@ -77,7 +77,8 @@
             "https://www.facebook.com/drsmiledentalgroup",
             "https://www.instagram.com/dr.smile_dental_group/",
             "http://www.drsmiledental.com/",
-            "https://doctorsmileonline.com/"
+            "https://doctorsmileonline.com/",
+            "https://toothopiadental.com/"
           ]
         },
         {
@@ -86,7 +87,7 @@
           "branchOf": { "@id": "https://www.doctorsmile.com/#organization" },
           "parentOrganization": { "@id": "https://www.doctorsmile.com/#organization" },
           "name": "Dr. Smile Dental Group — El Segundo",
-          "url": "https://www.doctorsmile.com/",
+          "url": "https://toothopiadental.com/dentist-near-el-segundo",
           "telephone": "+1-310-341-4788",
           "priceRange": "$$",
           "address": {
@@ -448,6 +449,36 @@
             .loc-card .loc-btn { width: 100%; }
         }
 
+        .sticky-call {
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 50;
+            background: #a71b29;
+            padding: 10px 15px;
+            padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+            box-sizing: border-box;
+        }
+        .sticky-call a {
+            display: block;
+            text-align: center;
+            color: #fff;
+            font-family: 'Gotham Book', sans-serif;
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            min-height: 44px;
+            line-height: 44px;
+        }
+        @media (max-width: 767px) {
+            .sticky-call { display: block; }
+            body { padding-bottom: 74px; }
+        }
+
         @media screen and (min-width: 320px) and (max-width: 768px) {
             div.overlay-text { height: 85px; padding: 15px 0; }
             .overlay-text h2 { font-size: 14px; line-height: 1.3; margin: 0; }
@@ -502,7 +533,7 @@
     <section class="cyoa p-0">
 
         <div class="col-md-6 offset-md-0 col-sm-6 offset-sm-0 col-xs-6 offset-xs-0 p-0 xs-flex-fix float-left">
-            <a class="goLink" href="http://www.drsmiledental.com/">
+            <a class="goLink" href="http://www.drsmiledental.com/?utm_source=doctorsmile_com&amp;utm_medium=hub&amp;utm_campaign=chooser_panel&amp;utm_content=javid">
                 <picture><source srcset="img/hJavid.webp" type="image/webp"><img class="img-fluid" src="img/hJavid.jpg" fetchpriority="high" alt="Hossein Javid, DDS" width="730" height="640" /></picture>
                 <div class="overlay-text">
                     <h2>Hossein Javid, DDS<br />Visit Website</h2>
@@ -510,7 +541,7 @@
             </a>
         </div>
         <div class="col-md-6 offset-md-0 col-sm-6 offset-sm-0 col-xs-6 offset-xs-0 p-0 xs-flex-fix float-left">
-            <a class="goLink" href="http://www.doctorsmileonline.com/">
+            <a class="goLink" href="http://www.doctorsmileonline.com/?utm_source=doctorsmile_com&amp;utm_medium=hub&amp;utm_campaign=chooser_panel&amp;utm_content=nadi_javid">
                 <picture><source srcset="img/kJavid.webp" type="image/webp"><img class="img-fluid" src="img/kJavid.jpg" fetchpriority="high" alt="Mariam Nadi, DDS and Kayvon Javid, DDS" width="730" height="640" /></picture>
                 <div class="overlay-text">
                     <h2>Mariam Nadi, DDS &amp;<br />Kayvon Javid, DDS<br />Visit Website</h2>
@@ -519,7 +550,7 @@
         </div>
 
     </section>
-    <section class="locations">
+    <section class="locations" id="locations">
         <div class="container">
             <div class="row heading">
                 <h2 class="black lg">Our Locations</h2>
@@ -545,9 +576,9 @@
                         <a class="loc-btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=11976+Aviation+Blvd%2C+El+Segundo%2C+CA+90304"
                            target="_blank" rel="noopener noreferrer"
                            onclick="trackLocationClick('El Segundo','directions', this.href)">Directions</a>
-                        <a class="loc-btn" href="https://toothopiadental.com/contact-us/"
+                        <a class="loc-btn" href="https://toothopiadental.com/contact-us/?utm_source=doctorsmile_com&amp;utm_medium=hub&amp;utm_campaign=office_card&amp;utm_content=el_segundo"
                            target="_blank" rel="noopener noreferrer"
-                           onclick="trackLocationClick('El Segundo','more_info', this.href)">El Segundo Info</a>
+                           onclick="trackLocationClick('El Segundo','more_info', this.href)">Toothopia Info</a>
                     </div>
                 </div>
 
@@ -570,7 +601,7 @@
                         <a class="loc-btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=2104+Pacific+Coast+Hwy%2C+Lomita%2C+CA+90717"
                            target="_blank" rel="noopener noreferrer"
                            onclick="trackLocationClick('Lomita','directions', this.href)">Directions</a>
-                        <a class="loc-btn" href="https://doctorsmileonline.com/dentist-lomita/"
+                        <a class="loc-btn" href="https://doctorsmileonline.com/dentist-lomita/?utm_source=doctorsmile_com&amp;utm_medium=hub&amp;utm_campaign=office_card&amp;utm_content=lomita"
                            target="_blank" rel="noopener noreferrer"
                            onclick="trackLocationClick('Lomita','more_info', this.href)">Lomita Info</a>
                     </div>
@@ -595,7 +626,7 @@
                         <a class="loc-btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=1622+S+Gaffey+St%2C+San+Pedro%2C+CA+90731"
                            target="_blank" rel="noopener noreferrer"
                            onclick="trackLocationClick('San Pedro','directions', this.href)">Directions</a>
-                        <a class="loc-btn" href="https://doctorsmileonline.com/dentist-san-pedro/"
+                        <a class="loc-btn" href="https://doctorsmileonline.com/dentist-san-pedro/?utm_source=doctorsmile_com&amp;utm_medium=hub&amp;utm_campaign=office_card&amp;utm_content=san_pedro"
                            target="_blank" rel="noopener noreferrer"
                            onclick="trackLocationClick('San Pedro','more_info', this.href)">San Pedro Info</a>
                     </div>
@@ -620,7 +651,7 @@
                         <a class="loc-btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=24667+Crenshaw+Blvd+%23D%2C+Torrance%2C+CA+90505"
                            target="_blank" rel="noopener noreferrer"
                            onclick="trackLocationClick('Torrance','directions', this.href)">Directions</a>
-                        <a class="loc-btn" href="https://doctorsmileonline.com/dentist-torrance/"
+                        <a class="loc-btn" href="https://doctorsmileonline.com/dentist-torrance/?utm_source=doctorsmile_com&amp;utm_medium=hub&amp;utm_campaign=office_card&amp;utm_content=torrance"
                            target="_blank" rel="noopener noreferrer"
                            onclick="trackLocationClick('Torrance','more_info', this.href)">Torrance Info</a>
                     </div>
@@ -643,7 +674,7 @@
                         <a class="loc-btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=2121+East+Coast+Hwy+STE+140%2C+Corona+Del+Mar%2C+CA+92625"
                            target="_blank" rel="noopener noreferrer"
                            onclick="trackLocationClick('Corona Del Mar','directions', this.href)">Directions</a>
-                        <a class="loc-btn" href="https://doctorsmileonline.com/dentist-newport/"
+                        <a class="loc-btn" href="https://doctorsmileonline.com/dentist-newport/?utm_source=doctorsmile_com&amp;utm_medium=hub&amp;utm_campaign=office_card&amp;utm_content=corona_del_mar"
                            target="_blank" rel="noopener noreferrer"
                            onclick="trackLocationClick('Corona Del Mar','more_info', this.href)">Corona Del Mar Info</a>
                     </div>
@@ -668,6 +699,9 @@
         </div>
     </section>
 </main>
+<div class="sticky-call" role="navigation" aria-label="Call your nearest office">
+    <a href="#locations" onclick="trackLocationClick('all','sticky_cta','#locations')">Call your nearest office</a>
+</div>
 <script>
     function trackLocationClick(city, linkType, url) {
         if (typeof gtag === 'function') {

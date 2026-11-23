@@ -17,7 +17,7 @@ General & family dentistry, oral surgery
 11976 Aviation Blvd., El Segundo, CA 90304
 - New Patients: [310-341-4788](tel:+1-310-341-4788)
 - Current Patients: [310-643-6221](tel:+1-310-643-6221)
-- [More Info](https://toothopiadental.com/contact-us/)
+- [Toothopia Info](https://toothopiadental.com/contact-us/)
 
 ### Lomita, CA
 Gum care, veneers & full-mouth restoration
