@@ -1,21 +1,21 @@
 # GEO / AI Search Visibility Analysis — doctorsmile.com (Dr. Smile Dental Group)
 
-Scope: `docs/index.html`, `docs/llms.txt`, `docs/robots.txt`, `docs/sitemap.xml`, `.well-known/`
-Date: 2026-08-31 · Skill: `seo-geo` (v1.9.6)
+Scope: `docs/index.html`, `docs/llms.txt`, `docs/index.md`, `docs/robots.txt`, `docs/sitemap.xml`, `.well-known/`
+Date: 2026-11-23 · Skill: `seo-geo` (v1.9.6)
 
 ---
 
-## 1. GEO Readiness Score: 62/100
+## 1. GEO Readiness Score: 66/100 (was 62 on 2026-08-31; 64 at report time)
 
 | Dimension | Weight | Score | Notes |
 |-----------|--------|-------|-------|
-| Citability | 25% | 4/10 | Static page has no quotable 134-167 word answer blocks (it's a chooser/directory) |
-| Structural Readability | 20% | 5/10 | No question-based H2s, no FAQ, minimal prose; data in cards + one table |
-| Multi-Modal Content | 15% | 6/10 | 2 doctor photos (lazy/preload), map links, no video/infographic |
-| Authority & Brand Signals | 20% | 5/10 | Real brand + sameAs, but no author bylines/dates/sources on page |
-| Technical Accessibility | 20% | 9/10 | **Excellent** — static SSR, all AI crawlers allowed, llms.txt present, Content Signals set |
+| Citability | 25% | 5/10 | Definitional intro + self-contained booking paragraph now exist (~30–50 words each), but still no 134–167 word answer blocks |
+| Structural Readability | 20% | 6/10 | Clean H1→H2→H3 hierarchy, location grid + closing blocks; still no question-based H2s / FAQ |
+| Multi-Modal Content | 15% | 6/10 | 2 doctor photos (preload/webp), map links; no video/infographic |
+| Authority & Brand Signals | 20% | 6/10 | Richer schema (5 branch entities w/ geo + hours); still no bylines, dates, or citations on page |
+| Technical Accessibility | 20% | 10/10 | **Excellent** — fully static SSR, all AI crawlers allowed, llms.txt + index.md + ai-catalog + Content-Signal. §3 contradiction and stale lastmod both fixed 2026-11-23 |
 
-**Key insight:** This is a **landing hub — it is not the content machine.** Its GEO strength is technical (accessibility/llms.txt) and directional (routes AI to the practice sites). Its GEO weakness is citability: a chooser page has almost nothing for an AI engine to quote. The real GEO opportunity lives on `doctorsmileonline.com`, not here.
+**Key insight (unchanged):** This is a **landing hub, not the content machine.** Its GEO strength remains technical + directional. Since August the schema and intro prose closed the cheap gaps; the remaining score is trapped behind content that belongs on `doctorsmileonline.com`.
 
 ---
 
@@ -23,47 +23,28 @@ Date: 2026-08-31 · Skill: `seo-geo` (v1.9.6)
 
 | Platform | Score | Rationale |
 |----------|-------|-----------|
-| Google AI Overviews | 55/100 | Indexable (SSR + bots allowed), but the page ranks/targets the brand name; little passage-level content to cite |
-| ChatGPT | 50/100 | Will read llms.txt + robots only if it reaches this domain; the actual FAQ content to cite is on the practice site |
-| Perplexity | 50/100 | Same — consumes the practice domain; this hub is thin |
-| Bing Copilot | 60/100 | Bingbot allowed, IndexNow not set up, Bing Places powers answers — recommend claiming GBP/Bing Places |
+| Google AI Overviews | 58/100 | Indexable; per-office geo+hours in schema now helps local pack/AIO grounding; still brand-targeted, thin passages |
+| ChatGPT | 52/100 | llms.txt/robots excellent; citable FAQ content still lives on the practice site |
+| Perplexity | 52/100 | Same — hub is thin; llms.txt table is the best cite |
+| Bing Copilot | 62/100 | Bingbot allowed; Bing Places/GBP coverage still unverifiable from the page |
 
 ---
 
-## 3. AI Crawler Access Status ✅
+## 3. AI Crawler Access Status ✅ (one new contradiction)
 
-`robots.txt` is **exemplary**. All key AI crawlers are explicitly allowed:
+`robots.txt` explicitly allows: GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot/Claude-Web/anthropic-ai, PerplexityBot, Google-Extended, Bingbot, FacebookBot, Applebot-Extended. `Content-Signal: ai-train=no, search=yes, ai-input=no` unchanged — deliberate, defensible.
 
-| Crawler | Allowed? |
-|---------|----------|
-| GPTBot | ✅ |
-| OAI-SearchBot | ✅ |
-| ChatGPT-User | ✅ |
-| ClaudeBot / Claude-Web / anthropic-ai | ✅ |
-| PerplexityBot | ✅ |
-| Google-Extended | ✅ |
-| Bingbot | ✅ |
-| Applebot-Extended | ✅ |
+⚠️ **New finding:** `Disallow: /.well-known/` now blocks the `ai-catalog.json` that the page advertises via `<link rel="ai-catalog">`. Crawlers honoring robots can't fetch the catalog they're pointed at. Either allow `/.well-known/ai-catalog.json` explicitly (`Allow:` line) or move the catalog to a public path.
 
-Plus `Content-Signal: ai-train=no, search=yes, ai-input=no` — a deliberate, defensible licensing stance. Nothing to fix here.
+✅ **Fixed 2026-11-23:** `robots.txt` now has `Allow: /.well-known/ai-catalog.json` (listed before the `Disallow: /.well-known/`, so longest-match and first-match crawlers agree). `sitemap.xml` lastmod bumped to 2026-11-23.
 
 ---
 
-## 4. llms.txt Status ✅ (present and well-formed)
+## 4. llms.txt Status ✅ (improved since August)
 
-`docs/llms.txt` exists, is well-structured, and follows the emerging standard:
+Present, well-formed, and now includes a **Booking section** ("call your nearest office… Spanish-speaking patients served at all offices") — the August recommendation to add explicit booking/emergency routing guidance is **DONE**. Locations/phones table remains the most AI-citeable artifact on the domain and matches the page. `index.md` alternate and `ai-catalog.json` (subject to §3 robots issue) are consistent with it.
 
-- ✅ Location-independent (deployed to `/llms.txt`)
-- ✅ Title + tagline + short description
-- ✅ "Key facts" section (brand, practice type)
-- ✅ Structured practice-website links
-- ✅ **Office locations & phones in a Markdown table** — the single most AI-citeable artifact on this domain
-- ✅ Related links to practice site
-
-**Recommendations (minor):**
-1. The llms.txt links/hours table and the visible page already match — good. Keep them in sync when offices change.
-2. Consider adding an explicit "Emergency instructions / how to book" line — AI engines route users; a "book via these numbers/links" note improves the AI→user handoff.
-3. The `index.md` alternate (linked via `<link rel="alternate" type="text/markdown">`) is a strong, complementary machine-readable artifact — ensure it stays current alongside `llms.txt`.
+**Still open:** keep all three artifacts in sync when offices change (no automated check exists).
 
 ---
 
@@ -71,73 +52,69 @@ Plus `Content-Signal: ai-train=no, search=yes, ai-input=no` — a deliberate, de
 
 | Channel | Presence |
 |---------|----------|
-| Wikipedia | ❌ None detected |
-| Reddit | ❌ None detected |
-| YouTube | ❌ None detected |
-| LinkedIn | ❌ None detected |
-| Facebook | ✅ `sameAs` → facebook.com/drsmiledentalgroup |
-| Instagram | ✅ `sameAs` → instagram.com/dr.smile_dental_group |
-| Practice sites | ✅ Linked |
+| Wikipedia / Wikidata | ❌ None |
+| Reddit / YouTube / LinkedIn | ❌ None |
+| Facebook / Instagram | ✅ via `sameAs` |
+| Practice sites (drsmiledental.com, doctorsmileonline.com) | ✅ Linked |
 
-**Recommendation (High impact):** Brand mentions correlate **3x more strongly** with AI visibility than backlinks. The "Dr. Smile" brand has almost **zero third-party entity footprint** (no Wikipedia/Wikidata, no Reddit/YouTube/LinkedIn). For a local dental group this is a longer-term play, but even a consistent dentist-author recipe pages, local media quotes, and Google Business Q&A rebuild positions the brand to be cited by ChatGPT/Perplexity (which lean on Bing/Yelp/BBB/Reddit, not the site itself).
+**Still open (High impact):** third-party entity footprint (GBP/Bing Places per office, Yelp, BBB, local press) remains the #1 lever with zero coverage. Brand mentions correlate ~3x more with AI visibility than backlinks; no change detectable from on-site files since August.
 
 ---
 
 ## 6. Passage-Level Citability
 
-**Optimal AI-citable block: 134-167 words, self-contained, direct answer in first 40-60 words.**
+Optimal block: 134–167 words, self-contained, direct answer in first 40–60 words.
 
-**Current state:** The page has **no 134-167 word prose blocks** — it's a hero + 2 chooser panels + 5 compact location cards. Nothing here is independently quotable by an AI engine ("what is Dr. Smile? where are they? how to book?" answers are fragmented across cards and only in the llms.txt table).
+**Since August (partially DONE):**
+- ✅ Hero intro is now a definitional sentence: "Dr. Smile Dental Group is a family-owned, multi-specialty dental practice with five offices across Los Angeles' South Bay and Newport Beach, California — welcoming new and current patients." (~30 words — quotable identity answer, though below optimal length).
+- ✅ "New Patients Welcome" closing block is a self-contained booking answer (~50 words) — answers "how do I book with Dr. Smile?"
+- ✅ Bilingual Spanish booking block — helps Spanish-language AI queries.
 
-**Highest-value fix (on the PRACTICE site, not here):** The FAQ / service content that answers real queries ("Do you accept new patients?", "What insurance do you take?", "What is same-day dentistry?") belongs on `doctorsmileonline.com` with question-based H2s and 134-167 word self-contained answers. That is where citability wins. For THIS hub, the single most-citeable artifact is the llms.txt table — keep it authoritative.
+**Still open:** no 134–167 word block, no question-H2s. Highest-value citability work still belongs on `doctorsmileonline.com` (service/FAQ pages).
 
 ---
 
 ## 7. Server-Side Rendering Check ✅
 
-- **Fully static HTML** (Astro-free, no build step, `docs/index.html` served as-is).
-- All content is in the initial HTML — **no JavaScript rendering dependency** for the visible content.
-- The only `<script>` is GA4 (`gtag.js`) for tracking `location_click` events — non-blocking, not content-critical.
-- WebP images load via `<picture>` with JPEG fallback; `preload` hints present.
-
-**AI crawlers that don't execute JS see 100% of the content.** This is a top-tier technical position. Nothing to change.
+Fully static HTML; all content in initial response; only JS is GA4 (non-blocking) plus inline `trackLocationClick` onclick handlers. AI crawlers without JS see 100% of content. Nothing changed since August; nothing to fix.
 
 ---
 
 ## 8. Top 5 Highest-Impact Changes
 
-1. **Audit RSL 1.0 / machine-readable licensing** — optional new standard (Dec 2025, backed by Reddit/Cloudflare/Quora). Consider adding an `rsl` signal to pair with the existing Content-Signal stance.
-2. **Point AI visibility effort at the practice site** — this hub is technically perfect but content-thin; the highest GEO ROI is FAQ/service citability on `doctorsmileonline.com`.
-3. **Add Bing Places claims per office** — Bing Places directly powers ChatGPT, Copilot, and Alexa local answers. Currently nothing indicates Bing Places or Apple Business Connect coverage.
-4. **Add per-office Maps embed / place IDs** so AI can geolocate each office precisely (currently only El Segundo has geo coordinates in schema).
-5. **Build third-party brand footprint** (local press, Yelp, BBB) — the #1 AI-visibility lever the business has zero of.
+1. **Fix the robots/ai-catalog contradiction** — `Disallow: /.well-known/` blocks the advertised `ai-catalog.json`. One-line robots fix. *(New.)*
+2. **Point AI visibility effort at `doctorsmileonline.com`** — FAQ/service pages with question H2s + 134–167 word answers. *(Still open.)*
+3. **Claim GBP + Bing Places per office** — powers ChatGPT/Copilot/Alexa local answers. *(Still open.)*
+4. **Build third-party brand footprint** (Yelp, BBB, local press, Wikidata item). *(Still open.)*
+5. **Bump `sitemap.xml` lastmod on deploy** and consider RSL 1.0 alongside Content-Signal. *(New/minor.)*
+
+**August items now DONE:** per-office geo coordinates in schema ✅; `openingHoursSpecification` per branch ✅; llms.txt booking guidance ✅; definitional intro + booking paragraph on page ✅; 5 branch `Dentist` entities ✅.
 
 ---
 
-## 9. Schema Recommendations (for AI discoverability)
+## 9. Schema Recommendations
 
-- ✅ `Dentist`/`MedicalBusiness`/`LocalBusiness` present with `sameAs` to social — good base.
-- ⚠️ **Expand to 5 branch `Dentist` entities** (one per office) — see the seo-local analysis for the full JSON-LD. AI engines need each office's phone/geo/address as structured data, not just El Segundo + a text list.
-- ⚠️ Add `openingHoursSpecification` (currently absent from schema despite hours on page).
-- 🔲 Optional: `Person` schema (`Physician` + `MedicalSpecialty`) for Drs. Javid/Nadi on the practice site for entity authority.
+- ✅ **DONE:** 5 branch `Dentist`/`MedicalBusiness`/`LocalBusiness` entities with `branchOf`/`parentOrganization`, per-office `geo` and `openingHoursSpecification` — exactly what August asked for. Well-formed `@graph` with stable `@id`s.
+- ⚠️ Hours in schema say Mon–Fri 08:00–18:00 only; page says "Sat/Sun by appt." — consistent enough, but consider a note or `specialOpeningHoursSpecification` if Saturday appt hours stabilize.
+- 🔲 Still open: `Physician` `Person` schema for Drs. Javid/Nadi on the practice site.
+- 🔲 Optional: `medicalSpecialty` entries on each branch; `hasMap` (Google Maps place URL) per branch.
 
 ---
 
 ## 10. Content Reformatting Suggestions
 
-For **this hub**, minimal prose rewrites are warranted (it's a chooser by design). Two small additions would raise citability **without bloating the page**:
+Minimal for a chooser hub. Since August the two August suggestions (how-to-book line; definitional intro) are **DONE** — do not add an FAQ microsection here (duplication risk with practice site stands).
 
-1. **Add a 1-sentence "How to book" line** under the tagline or in a footer block, e.g. *"Dr. Smile Dental Group is a multi-specialty practice with five Southern California offices. To book, call your nearest office directly — numbers for each location are listed below."* — a self-contained definitional answer an AI can quote.
-2. **Add an FAQ microsection** (2-4 H2 question headings) if the practice wants the hub to rank for "is Dr. Smile accepting new patients?" — but note this duplicates the practice site and should stay thin.
-
-**The 134-167 word answer blocks and question-H2 citability work should be done on `doctorsmileonline.com`, not here.**
+Remaining, low-effort:
+1. Consider merging intro + booking block into one ~140-word self-contained paragraph ("What is Dr. Smile / where / how to book") to hit the optimal citability band without adding sections.
+2. Keep per-office service blurbs (they now differentiate cards well); mirror any changes into `llms.txt`/`index.md`.
 
 ---
 
 ## Limitations
 
-Assessed the static Hub page + its companion agent files. Could not verify: live ChatGPT/Perplexity retrieval output, Bing/Yelp/BBB listings, actual brand-mention counts, or whether Google AI Overviews currently surfaces this domain. Recommend DataForSEO `ai_optimization_chat_gpt_scraper` / `ai_opt_llm_ment_search` for live LLM-retrieval verification.
+Static-file assessment only. Could not verify: live ChatGPT/Perplexity retrieval, GBP/Bing Places/Yelp/BBB listings, actual brand-mention counts, or whether the deployed site matches these files (including whether `/.well-known/ai-catalog.json` serves with robots blocking). Recommend DataForSEO `ai_optimization_chat_gpt_scraper` / `ai_opt_llm_ment_search` for live LLM-retrieval verification.
 
 ---
 
-*Generated by `seo-geo` skill (AgriciDaniel v1.9.6) applied to /home/spencerkittleson/repos/doctorsmile_com_landing/docs/index.html*
+*Generated by `seo-geo` skill (AgriciDaniel v1.9.6) applied to /root/doctorsmile_landing/docs/index.html*

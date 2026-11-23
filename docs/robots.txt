@@ -1,7 +1,11 @@
 # robots.txt — Dr. Smile Dental Group
 # https://www.doctorsmile.com/
 
+# Expose the AI catalog advertised via <link rel="ai-catalog"> while keeping
+# the rest of /.well-known/ closed. Google uses longest-match (the Allow wins);
+# the Allow is also listed first so first-match crawlers behave the same.
 User-agent: *
+Allow: /.well-known/ai-catalog.json
 Allow: /
 Disallow: /.well-known/
 Disallow: /*?s=
