@@ -165,7 +165,9 @@
           },
           "geo": { "@type": "GeoCoordinates", "latitude": "33.80266", "longitude": "-118.32987" },
           "openingHoursSpecification": [
-            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "08:00", "closes": "18:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "09:00", "closes": "18:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:30", "closes": "17:00" }
           ]
         },
         {
@@ -613,7 +615,7 @@
                        onclick="trackLocationClick('Torrance','call','tel:+1-310-341-4783')">310-341-4783</a>
                     <span class="loc-phone-secondary">Current patients: <a href="tel:+1-310-325-8555"
                        onclick="trackLocationClick('Torrance','call','tel:+1-310-325-8555')">310-325-8555</a></span>
-                    <p class="loc-hours">Mon&ndash;Fri: 8AM&ndash;6PM &middot; Sat/Sun: by appt.</p>
+                    <p class="loc-hours">Mon&ndash;Wed: 8AM&ndash;6PM &middot; Thu: 9AM&ndash;6PM &middot; Fri: 8:30AM&ndash;5PM &middot; Sat/Sun: closed</p>
                     <div class="loc-actions">
                         <a class="loc-btn solid" href="https://www.google.com/maps/search/?api=1&amp;query=24667+Crenshaw+Blvd+%23D%2C+Torrance%2C+CA+90505"
                            target="_blank" rel="noopener noreferrer"

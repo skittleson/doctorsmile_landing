@@ -9,7 +9,8 @@
 
 ## Our Locations
 
-**Hours (all locations):** Mon–Fri 8:00am–6:00pm, Sat/Sun by appointment only.
+**Hours:** Mon–Fri 8:00am–6:00pm, Sat/Sun by appointment — except Torrance:
+Mon–Wed 8:00am–6:00pm, Thu 9:00am–6:00pm, Fri 8:30am–5:00pm, Sat/Sun closed.
 
 ### El Segundo, CA
 General & family dentistry, oral surgery
